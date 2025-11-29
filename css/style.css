@@ -59,12 +59,12 @@ main > h2 {
     width: 300%;
     height: 100%;
     display: flex;
+    transition: all 0.5s;
 }
-.slide > div {
+.slide div {
     width: 33.3333%;
+    height: 100%;
     text-align: center;
-    box-sizing: border-box;
-    transition: 0.5s
 }
 .slide h3 {
     margin: 0;
@@ -83,4 +83,28 @@ main > h2 {
 }
 .slide3 { 
   transform: translateX(-66.66%);
+}
+/*左右移動ボタンのスタイル*/
+.prev{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 10px;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-right: solid 20px #836200;
+    border-top: solid 10px transparent;border-bottom: solid 10px transparent;
+}
+
+.next{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 10px;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-left: solid 20px #836200;
+    border-top: solid 10px transparent;border-bottom: solid 10px transparent;
 }
