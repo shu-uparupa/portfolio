@@ -1,18 +1,25 @@
 /*スタイルシートの基本設定*/
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    text-align: center;
     line-height: 1.6;
-    background:linear-gradient(140deg, #f5db98, #b26800da);
-    color: #6c3400;
-    padding: 20px;
-
+    color: #5f3700;
+    margin: 0;
 }
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
 /*ボディのスタイル*/
 body > div {
-    max-width: 800px;
+    width: device-width;
     margin:  auto;
     background-color : #fffefb
 }
+
 /*ヘッダーのスタイル*/
 header {
     background-color: #ffebc5;
@@ -22,16 +29,58 @@ header {
 }
 header > h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 75px;
+    font-weight: normal;
     text-align: left;
 }
-header > nav > ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+/*ナビゲーションメニューのスタイル*/
+nav {
+}
+
+/*メインコンテンツのスタイル*/
+main {
+    padding: 20px;
+}
+
+main > h2 {
+    font-size: 100px;
+    margin: 20px;
+    font-weight: lighter;
+}
+/*slideのスタイル*/
+.slide-wrapper {
     width: 100%;
-    padding: 0;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.slide > div {
+    width: 33.3333%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.5s
+}
+.slide h3 {
     margin: 0;
-    font-size: 23px;
+    font-size: 50px;
+}
+.slide ul {
+    font-size: 30px;
+    text-align: left;
+    display: inline-block;
+}
+.slide1 { 
+  transform: translateX(0);
+}
+.slide2 { 
+  transform: translateX(-33.33%);
+}
+.slide3 { 
+  transform: translateX(-66.66%);
 }
