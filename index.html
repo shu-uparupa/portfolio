@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lamg="ja">
-<html>
+<html lang="ja">
  <head>
     <meta charset="utf-8">
     <meta name="author" content="Shu">
@@ -11,24 +10,26 @@
      <title>ポートフォリオ</title>
  </head>
  <body>
-   <div>
+   <div class="site-wrap">
       <header>
-         <h1>Port Folio</h1>
+         <h1>Portfolio</h1>
+         <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
+         <nav class="nav" id="nav">
+            <ul class="nav__list">
+               <li><a href="#profile">Profile</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
       </header>
-      <nav class="nav">
-         <ul class="nav__list">
-            <li>
-               <a href=>Profile</a>
-            </li>
-            <li>
-               <a href=>仮置き</a>
-            </li>
-         </ul>
-      </nav>
       <main>
-         <h2>Profile</h2>
-            <div class="slides-wrapper"><!--スライドの一番外側-->
-               <div id="slide" class="slide"><!--スライド自体のタグ-->
+         <h2 id="profile">Profile</h2>
+            <div class="slides-wrapper"><!-- スライドの一番外側 -->
+               <div id="slide" class="slide slide1"><!-- スライド自体（初期は slide1） -->
                   <div>
                      <h3>経歴</h3>
                      <ul>
@@ -89,10 +90,19 @@
                      </ul>
                   </div>
                </div>
-               <!--スライド移動ボタン-->
-               <span id="prev" class="prev"></span>
-               <span id="next" class="next"></span>
+               <!-- スライド移動ボタン -->
+               <button id="prev" class="prev" aria-label="前へ"></button>
+               <button id="next" class="next" aria-label="次へ"></button>
             </div>
+         
+         <section id="projects">
+            <h2>Projects</h2>
+            <p>ここに作品やリンクを追加してください。</p>
+         </section>
+         <section id="contact">
+            <h2>Contact</h2>
+            <p>メール: <a href="mailto:example@example.com">example@example.com</a></p>
+         </section>
       </main>
       <footer>
          <small>&copy; 2025 Shu. All Rights Reserved.</small>
