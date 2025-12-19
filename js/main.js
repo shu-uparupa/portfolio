@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ハンバーガーメニュー制御
+  // ハンバーガーメニュー
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
   if (hamburger && nav) {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // スライドショー制御
+  // スライドの切り替え
   const slide = document.getElementById('slide');
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
@@ -44,11 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') nextSlide();
   });
 
-  // optional: 自動切替（コメント解除で有効）
-  // let timer = setInterval(nextSlide, 4000);
-  // slide.addEventListener('mouseenter', () => clearInterval(timer));
-  // slide.addEventListener('mouseleave', () => timer = setInterval(nextSlide, 4000));
 
-  // 初期表示
   update();
 });
